@@ -1,1 +1,46 @@
 // Navigation Styles here
+.header-wrapper {
+    width: 100%;
+    border-bottom: 2px dashed @navigation-border;
+    padding-bottom: 2%;
+
+    header {
+        .flex-wrapper(row, unset, 100%);
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 2%;
+
+
+        h1 {
+            .flex-wrapper(unset, unset, 30%);
+            align-self: flex-start;
+        }
+
+        nav {
+            .flex-wrapper(row, flex-end, 100%);
+            height: auto;
+
+
+            a {
+                .flex-wrapper(column, center, auto);
+                margin-right: 5%;
+                color: @font-color;
+                text-align: center;
+                font-size: 1.8rem;
+
+                &:hover {
+                    color: lighten(@font-color, 20%)
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    .link-button(@button-bg, 100%, 10px, @white, 2rem, 600, 8px )
+
+    &:hover {
+        background-color: darken(@button-bg, 15%);
+    }
+} 

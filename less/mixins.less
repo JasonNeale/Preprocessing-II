@@ -1,1 +1,20 @@
-// Mixins in here
+.flex-wrapper(@flxDir, @justCont, @flxWidth) {
+    display: flex;
+    flex-direction: @flxDir;
+    justify-content: @justCont;
+    width: @flxWidth;
+}
+
+.link-button(@bg-color, @width, @bdr-rad, @txt-color, @fnt-sz, @fnt-wt, @pad ) {
+    background-color: @bg-color;
+    width: @width;
+    border-radius: @bdr-rad;
+    color: @white;
+    font-size: @fnt-sz;
+    font-weight: @fnt-wt;
+    padding: @pad;
+
+    &:hover {
+        background-color: darken(@bg-color, 15%);
+    }
+}
